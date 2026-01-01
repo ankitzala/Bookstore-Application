@@ -11,29 +11,37 @@ namespace Bookstore_Application.Controllers
             _bookRepositery = new BookRepositery();
         }
 
-        public List<BookModel> GetAllBooks() {
+        public ViewResult GetAllBooks() {
 
-            return _bookRepositery.GetAllBooks();
+            var data = _bookRepositery.GetAllBooks();
 
-            //return "All Boooks";
-            ////https://localhost:7174/book/GetAllBooks
+            return View(data);
+
+           /*
+           return "All Boooks";
+           https://localhost:7174/book/GetAllBooks
+           */
         }
 
         public BookModel? GetBook(int id) {
             return _bookRepositery.GetBookById(id);
 
-        //    return $"dotnet with id = {id}";
-        //https://localhost:7174/book/getbook/4
+           
+            // return $"dotnet with id = {id}";
+            //https://localhost:7174/book/getbook/4
+           
 
         }
 
-        public List<BookModel> SearchBooks(string bookName ,string authorName)
+        public List<BookModel> SearchBooks(string bookName, string authorName)
         {
             return _bookRepositery.SesrchBook(bookName, authorName);
 
-            //return $"Book Name = {bookName} and Author is {authorName}";
 
-            //https://localhost:7174/book/SearchBooks?bookName=MVCbook&authorName=Ankit%20Zala
+            
+            //return $"Book Name = {bookName} and Author is {authorName}";
+            // https://localhost:7174/book/SearchBooks?bookName=MVCbook&authorName=Ankit%20Zala
+            
         }
     }
 }

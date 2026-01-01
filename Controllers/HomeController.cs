@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Transactions;
 using Bookstore_Application.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,12 +17,21 @@ namespace Bookstore_Application.Controllers
         public IActionResult Index()
         {
             return View();
+
+
+            //for another location
+            //    return View(EnterpriseServicesInteropOption full path of dictonary);
         }
 
         public IActionResult Privacy()
         {
             return View();
         }
+
+        public IActionResult AboutUs() { 
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

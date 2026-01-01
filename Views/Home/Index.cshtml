@@ -3,6 +3,78 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome Ankit Zala</h1>
+    <h1 class="display-4">Welcome To Bookstore Application </h1>
+    <h1>@DateTime.Now</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@{
+    int num = 5;
+    int[] numbers = { 10, 20, 30, 40, 50 };
+}
+
+<h2>Conditional Statements in Razor</h2>
+
+@if (num > 0)
+{
+    <p>Number is :Positive</p>
+}
+else if (num < 0)
+{
+    <p>Number is :Negative</p>
+}
+else
+{
+    <p>Number is :Zero</p>
+}
+
+<hr />
+
+@* TERNARY OPERATOR *@
+
+<p>
+    Even / Odd:
+    <b>@(num % 2 == 0 ? "Even Number" : "Odd Number")</b>
+</p>
+
+<hr />
+
+@* switch *@
+@switch (num)
+{
+    case 1:
+        <p>You entered <b>ONE</b></p>
+        break;
+
+    case 2:
+        <p>You entered <b>TWO</b></p>
+        break;
+
+    case 5:
+        <p>You entered <b>FIVE</b></p>
+        break;
+
+    default:
+        <p>Number is not 1, 2, or 5</p>
+        break;
+}
+
+<h2>FOR Loop</h2>
+
+<ul>
+    @for (int i = 0; i < numbers.Length; i++)
+    {
+        <li>Index @i > Value: @numbers[i]</li>
+    }
+</ul>
+
+<hr />
+
+<h2>FOREACH Loop</h2>
+
+<ul>
+    @foreach (var num1 in numbers)
+    {
+        <li>@num1</li>
+    }
+</ul>
