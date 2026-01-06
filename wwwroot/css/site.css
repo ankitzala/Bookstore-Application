@@ -5,6 +5,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+    
   }
 }
 
@@ -13,10 +14,35 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: antiquewhite;
+}
+
+.rhos-img {
+    display: block; 
+    width: 100%; 
+    max-width: 420px; 
+    height: auto; 
+    margin: 16px auto; 
+    border-radius: 18px; 
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18); 
+    background: #fff; 
+    object-fit: cover; 
+}
+
+.rhos-heder {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000;
 }
