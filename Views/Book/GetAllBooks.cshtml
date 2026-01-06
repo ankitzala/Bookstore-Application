@@ -1,6 +1,48 @@
-﻿@{
-    ViewData["Title"] = "About Us";
+﻿@model IEnumerable<Bookstore_Application.Models.BookModel>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Get All Books";
 }
 
-    <h1 class="display-4">Get All Books!</h1>
-    <button>Click me!</button>
+    <h4>Get All Books!</h4>
+
+    <div class="container mb-5">
+    <div class="row justify-content-center g-4">
+
+        @foreach(var book in Model)
+        {
+            <!-- Book 1 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="card h-50 mx-auto" style="width: 18rem;">
+                    <div class=" bg-secondary d-flex align-items-center justify-content-center text-white">
+                        <img src="@Url.Content(book.ImageUrl)" class="img-fluid w-25" alt="Alternate Text" />
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@book.Title</h5>
+                        <p class="card-text">
+                            A practical guide to writing clean, readable,
+                            and maintainable code.
+                        </p>
+
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><strong>Author:</strong> @book.Author</li>
+                            <li class="list-group-item"><strong>Category:</strong> Programming</li>
+                            <li class="list-group-item"><strong>Pages:</strong> 464</li>
+                            <li class="list-group-item"><strong>Language:</strong> English</li>
+                        </ul>
+
+                        <div class="mt-auto text-center">
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+        <!-- Book 1 -->
+
+
+
+    </div>
+</div>

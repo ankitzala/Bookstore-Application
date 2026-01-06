@@ -25,12 +25,12 @@ namespace Bookstore_Application.Repository
         {
             return new List<BookModel>()
             {
-                new BookModel(){Id =1,Title="MVC Book",Author="Ankit"},
-                new BookModel(){Id =2,Title="Python",Author="Ankit"},
-                new BookModel(){Id =3,Title="Java",Author="Ankit"},
-                new BookModel(){Id =4,Title="Dot net",Author="Ankit"},
-                new BookModel(){Id =5,Title="Ai/ML",Author="Ankit"},
-                new BookModel(){Id =6,Title="PHP",Author="Ankit"},
+                new BookModel(){Id =1,Title="MVC Book",Author="Ankit",ImageUrl = "~/images/Dotnet.png"},
+                new BookModel(){Id =2,Title="Python",Author="Vipul",ImageUrl = "~/images/B2.png"},
+                new BookModel(){Id =3,Title="C++",Author="Mahir",ImageUrl = "~/images/B3.png"},
+                new BookModel(){Id =4,Title="Dot net",Author="Bapu",ImageUrl = "~/images/Dotnet.png"},
+                new BookModel(){Id =5,Title="Ai/ML",Author="Viral",ImageUrl = "~/images/AIML.png"},
+                new BookModel(){Id =6,Title="PHP",Author="Devansh",ImageUrl = "~/images/PHP.png"},
 
 
             };
